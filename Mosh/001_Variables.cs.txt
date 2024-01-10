@@ -1,0 +1,5 @@
+int number;
+
+int Number = 1;
+
+const float = 3.14f;
