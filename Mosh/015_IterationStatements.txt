@@ -1,0 +1,63 @@
+Iteration Statements
+
+// For Loops
+for(var i = 0; i < 10; i++)
+{
+...
+}
+
+for (var i = 1; i <= 10; i++)
+{
+	if (i%2 == 0)
+	{
+		Console.WriteLine(1);
+	}
+}
+
+// Foreach Loops
+foreach (var number in numbers)
+{
+...
+}
+var name = "John Smith";
+foreach (var character in name)
+{
+	Console.WriteLine(character);
+}
+var numbers = new int[] {1, 2, 3, 4};
+foreach (var number in numbers)
+{
+	Console.WriteLine(number);
+}
+
+// While Loops
+while (i < 10)
+{
+...
+i++;
+}
+var i = 0;
+while (i <= 10)
+{
+	if (i % 2 == 0)
+		Console.WriteLine(i);
+		
+	i++;
+}
+
+// Do-While Loops
+do
+{
+...
+i++;
+} while (i < 10);
+
+// Break: Jumps out of the loop
+// continue: jumps to next iteration.
+
+//Random Class
+var random = new Random();
+for (var i = 0; i < 10; i++)
+{
+	Console.WriteLine(random.Next(1, 10));
+}
