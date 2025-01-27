@@ -6,5 +6,6 @@ namespace form_properties
         {
             InitializeComponent();
         }
+
     }
 }
