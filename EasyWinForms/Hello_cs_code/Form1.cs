@@ -72,7 +72,7 @@ namespace Hello_cs_code
         private void timer2_Tick(object sender, EventArgs e)
         {
             //this.textBox3.Text = DateTime.Now.ToString();
-            this.textBox3.Text = DateTime.Now.Hour.ToString() + ":" + DateTime.Now.Minute.ToString() + ":" +  DateTime.Now.Second.ToString() + ":" + DateTime.Now.Millisecond.ToString();
+            this.textBox3.Text = DateTime.Now.Hour.ToString() + ":" + DateTime.Now.Minute.ToString() + ":" + DateTime.Now.Second.ToString() + ":" + DateTime.Now.Millisecond.ToString();
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -83,6 +83,69 @@ namespace Hello_cs_code
         private void button9_Click(object sender, EventArgs e)
         {
             this.timer2.Enabled = true;
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            // MessageBox.Show("Do you want to delete?", "Finish", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2, MessageBoxOptions.DefaultDesktopOnly);
+            MessageBox.Show("Done!");
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            this.pictureBox1.Image = Image.FromFile("F:\\Projects\\TutzProjectz2022\\CSharpOddities\\EasyWinForms\\Hello_cs_code\\koala.jpg");
+            this.BackgroundImage = Image.FromFile("F:\\Projects\\TutzProjectz2022\\CSharpOddities\\EasyWinForms\\Hello_cs_code\\koala.jpg");
+            this.tabPage5.BackgroundImage = Image.FromFile("F:\\Projects\\TutzProjectz2022\\CSharpOddities\\EasyWinForms\\Hello_cs_code\\koala.jpg");
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            string msg;
+            msg = this.textBox4.Text;
+            MessageBox.Show("Hi :" + msg);
+            MessageBox.Show("Hi :" + msg + "Welcome Back");
+
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            //string a1;
+            //string a2;
+            //a1 = this.textBox5.Text;
+            //a2 = this.textBox6.Text;
+
+            int a1;
+            int a2;
+            //a1 = Convert.ToInt32(this.textBox5.Text);
+            //a2 = Convert.ToInt32(this.textBox6.Text);
+            Int32.TryParse(this.textBox5.Text, out a1);
+            Int32.TryParse(this.textBox6.Text, out a2);
+            int a3;
+            a3 = a1 + a2;
+            MessageBox.Show(a3.ToString());
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            this.process1.StartInfo.FileName = "C:\\Windows\\System32\\calc.exe";
+            this.process1.Start();
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            this.process1.StartInfo.FileName = "C:\\Windows\\System32\\notepad.exe";
+            this.process1.Start();
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            this.process1.StartInfo.FileName = "C:\\Windows\\System32\\notepad.exe";
+            this.process1.Start();
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
