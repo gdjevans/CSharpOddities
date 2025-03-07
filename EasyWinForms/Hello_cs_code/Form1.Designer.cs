@@ -66,8 +66,24 @@
             button15 = new Button();
             tabPage8 = new TabPage();
             button18 = new Button();
+            tabPage9 = new TabPage();
+            label1 = new Label();
+            textBox7 = new TextBox();
+            button19 = new Button();
+            tabPage10 = new TabPage();
+            button21 = new Button();
+            comboBox1 = new ComboBox();
+            button20 = new Button();
+            tabPage11 = new TabPage();
+            button23 = new Button();
+            textBox8 = new TextBox();
+            label2 = new Label();
+            button22 = new Button();
             timer2 = new System.Windows.Forms.Timer(components);
             process1 = new System.Diagnostics.Process();
+            button24 = new Button();
+            textBox9 = new TextBox();
+            label3 = new Label();
             panel1.SuspendLayout();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
@@ -79,6 +95,9 @@
             tabPage6.SuspendLayout();
             tabPage7.SuspendLayout();
             tabPage8.SuspendLayout();
+            tabPage9.SuspendLayout();
+            tabPage10.SuspendLayout();
+            tabPage11.SuspendLayout();
             SuspendLayout();
             // 
             // button1
@@ -205,6 +224,9 @@
             tabControl1.Controls.Add(tabPage6);
             tabControl1.Controls.Add(tabPage7);
             tabControl1.Controls.Add(tabPage8);
+            tabControl1.Controls.Add(tabPage9);
+            tabControl1.Controls.Add(tabPage10);
+            tabControl1.Controls.Add(tabPage11);
             tabControl1.Location = new Point(12, 12);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
@@ -459,6 +481,140 @@
             button18.UseVisualStyleBackColor = true;
             button18.Click += button18_Click;
             // 
+            // tabPage9
+            // 
+            tabPage9.Controls.Add(label1);
+            tabPage9.Controls.Add(textBox7);
+            tabPage9.Controls.Add(button19);
+            tabPage9.Location = new Point(4, 24);
+            tabPage9.Name = "tabPage9";
+            tabPage9.Padding = new Padding(3);
+            tabPage9.Size = new Size(889, 386);
+            tabPage9.TabIndex = 8;
+            tabPage9.Text = "Calc Age";
+            tabPage9.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(266, 130);
+            label1.Name = "label1";
+            label1.Size = new Size(74, 15);
+            label1.TabIndex = 2;
+            label1.Text = "Year of Birth:";
+            label1.Click += label1_Click;
+            // 
+            // textBox7
+            // 
+            textBox7.Location = new Point(346, 122);
+            textBox7.Name = "textBox7";
+            textBox7.Size = new Size(274, 23);
+            textBox7.TabIndex = 1;
+            // 
+            // button19
+            // 
+            button19.Location = new Point(367, 193);
+            button19.Name = "button19";
+            button19.Size = new Size(173, 53);
+            button19.TabIndex = 0;
+            button19.Text = "CalculateAge";
+            button19.UseVisualStyleBackColor = true;
+            button19.Click += button19_Click;
+            // 
+            // tabPage10
+            // 
+            tabPage10.Controls.Add(button21);
+            tabPage10.Controls.Add(comboBox1);
+            tabPage10.Controls.Add(button20);
+            tabPage10.Location = new Point(4, 24);
+            tabPage10.Name = "tabPage10";
+            tabPage10.Padding = new Padding(3);
+            tabPage10.Size = new Size(889, 386);
+            tabPage10.TabIndex = 9;
+            tabPage10.Text = "ForLoop";
+            tabPage10.UseVisualStyleBackColor = true;
+            // 
+            // button21
+            // 
+            button21.Location = new Point(338, 228);
+            button21.Name = "button21";
+            button21.Size = new Size(177, 50);
+            button21.TabIndex = 2;
+            button21.Text = "Add Item";
+            button21.UseVisualStyleBackColor = true;
+            button21.Click += button21_Click;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(338, 184);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(177, 23);
+            comboBox1.TabIndex = 1;
+            // 
+            // button20
+            // 
+            button20.Location = new Point(338, 61);
+            button20.Name = "button20";
+            button20.Size = new Size(177, 50);
+            button20.TabIndex = 0;
+            button20.Text = "Show Msg";
+            button20.UseVisualStyleBackColor = true;
+            button20.Click += button20_Click;
+            // 
+            // tabPage11
+            // 
+            tabPage11.Controls.Add(button24);
+            tabPage11.Controls.Add(textBox9);
+            tabPage11.Controls.Add(label3);
+            tabPage11.Controls.Add(button23);
+            tabPage11.Controls.Add(textBox8);
+            tabPage11.Controls.Add(label2);
+            tabPage11.Controls.Add(button22);
+            tabPage11.Location = new Point(4, 24);
+            tabPage11.Name = "tabPage11";
+            tabPage11.Padding = new Padding(3);
+            tabPage11.Size = new Size(889, 386);
+            tabPage11.TabIndex = 10;
+            tabPage11.Text = "tabPage11";
+            tabPage11.UseVisualStyleBackColor = true;
+            // 
+            // button23
+            // 
+            button23.Location = new Point(473, 68);
+            button23.Name = "button23";
+            button23.Size = new Size(132, 36);
+            button23.TabIndex = 3;
+            button23.Text = "Show Name (SWITCH)";
+            button23.UseVisualStyleBackColor = true;
+            button23.Click += button23_Click;
+            // 
+            // textBox8
+            // 
+            textBox8.Location = new Point(336, 39);
+            textBox8.Name = "textBox8";
+            textBox8.Size = new Size(195, 23);
+            textBox8.TabIndex = 2;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(272, 42);
+            label2.Name = "label2";
+            label2.Size = new Size(62, 15);
+            label2.TabIndex = 1;
+            label2.Text = "Month No";
+            // 
+            // button22
+            // 
+            button22.Location = new Point(248, 68);
+            button22.Name = "button22";
+            button22.Size = new Size(132, 36);
+            button22.TabIndex = 0;
+            button22.Text = "Show Name (IF)";
+            button22.UseVisualStyleBackColor = true;
+            button22.Click += button22_Click;
+            // 
             // timer2
             // 
             timer2.Enabled = true;
@@ -476,6 +632,32 @@
             process1.StartInfo.UseCredentialsForNetworkingOnly = false;
             process1.StartInfo.UserName = "";
             process1.SynchronizingObject = this;
+            // 
+            // button24
+            // 
+            button24.Location = new Point(473, 219);
+            button24.Name = "button24";
+            button24.Size = new Size(132, 36);
+            button24.TabIndex = 7;
+            button24.Text = "Show No (SWITCH)";
+            button24.UseVisualStyleBackColor = true;
+            button24.Click += button24_Click;
+            // 
+            // textBox9
+            // 
+            textBox9.Location = new Point(336, 190);
+            textBox9.Name = "textBox9";
+            textBox9.Size = new Size(195, 23);
+            textBox9.TabIndex = 6;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(256, 193);
+            label3.Name = "label3";
+            label3.Size = new Size(78, 15);
+            label3.TabIndex = 5;
+            label3.Text = "Month Name";
             // 
             // Form1
             // 
@@ -502,6 +684,11 @@
             tabPage6.PerformLayout();
             tabPage7.ResumeLayout(false);
             tabPage8.ResumeLayout(false);
+            tabPage9.ResumeLayout(false);
+            tabPage9.PerformLayout();
+            tabPage10.ResumeLayout(false);
+            tabPage11.ResumeLayout(false);
+            tabPage11.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -545,5 +732,21 @@
         private Button button17;
         private TabPage tabPage8;
         private Button button18;
+        private TabPage tabPage9;
+        private Label label1;
+        private TextBox textBox7;
+        private Button button19;
+        private TabPage tabPage10;
+        private Button button20;
+        private Button button21;
+        private ComboBox comboBox1;
+        private TabPage tabPage11;
+        private TextBox textBox8;
+        private Label label2;
+        private Button button22;
+        private Button button23;
+        private Button button24;
+        private TextBox textBox9;
+        private Label label3;
     }
 }
