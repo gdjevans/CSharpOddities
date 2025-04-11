@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             toolStrip1 = new ToolStrip();
-            webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
             btnBack = new ToolStripButton();
             btnForward = new ToolStripButton();
             toolStripSeparator1 = new ToolStripSeparator();
             toolStripComboBox1 = new ToolStripComboBox();
             btnGo = new ToolStripButton();
+            webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
             toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)webView21).BeginInit();
             SuspendLayout();
@@ -49,17 +49,6 @@
             toolStrip1.TabIndex = 0;
             toolStrip1.Text = "toolStrip1";
             // 
-            // webView21
-            // 
-            webView21.AllowExternalDrop = true;
-            webView21.CreationProperties = null;
-            webView21.DefaultBackgroundColor = Color.White;
-            webView21.Location = new Point(0, 28);
-            webView21.Name = "webView21";
-            webView21.Size = new Size(800, 420);
-            webView21.TabIndex = 1;
-            webView21.ZoomFactor = 1D;
-            // 
             // btnBack
             // 
             btnBack.DisplayStyle = ToolStripItemDisplayStyle.Text;
@@ -69,6 +58,7 @@
             btnBack.Size = new Size(36, 22);
             btnBack.Tag = "";
             btnBack.Text = "Back";
+            btnBack.Click += btnBack_Click;
             // 
             // btnForward
             // 
@@ -78,6 +68,7 @@
             btnForward.Name = "btnForward";
             btnForward.Size = new Size(54, 22);
             btnForward.Text = "Forward";
+            btnForward.Click += btnForward_Click;
             // 
             // toolStripSeparator1
             // 
@@ -88,6 +79,7 @@
             // 
             toolStripComboBox1.Name = "toolStripComboBox1";
             toolStripComboBox1.Size = new Size(121, 25);
+            toolStripComboBox1.KeyDown += toolStripComboBox1_KeyDown;
             // 
             // btnGo
             // 
@@ -97,6 +89,18 @@
             btnGo.Name = "btnGo";
             btnGo.Size = new Size(28, 22);
             btnGo.Text = "GO";
+            btnGo.Click += btnGo_Click;
+            // 
+            // webView21
+            // 
+            webView21.AllowExternalDrop = true;
+            webView21.CreationProperties = null;
+            webView21.DefaultBackgroundColor = Color.White;
+            webView21.Location = new Point(0, 28);
+            webView21.Name = "webView21";
+            webView21.Size = new Size(800, 420);
+            webView21.TabIndex = 1;
+            webView21.ZoomFactor = 1D;
             // 
             // Form1
             // 
