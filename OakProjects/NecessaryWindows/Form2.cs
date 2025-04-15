@@ -16,5 +16,23 @@ namespace NecessaryWindows
         {
             InitializeComponent();
         }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            string message = "Do you want to close window?";
+            string messageTitle = "Close Window";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show(message,messageTitle, buttons);
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            else if (result == DialogResult.No)
+            {
+                // do nothing
+            }
+
+
+        }
     }
 }
