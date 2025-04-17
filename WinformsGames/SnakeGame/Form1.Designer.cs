@@ -71,6 +71,7 @@
             Name = "frmSnake";
             Text = "Form1";
             Load += frmSnake_Load;
+            KeyDown += frmSnake_KeyDown;
             ((System.ComponentModel.ISupportInitialize)picGameBoard).EndInit();
             ResumeLayout(false);
         }
