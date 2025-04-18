@@ -48,6 +48,7 @@
             // 
             timer.Enabled = true;
             timer.Interval = 500;
+            timer.Tick += Timer_Tick;
             // 
             // imgList
             // 
@@ -69,6 +70,7 @@
             ClientSize = new Size(451, 450);
             Controls.Add(picGameBoard);
             Name = "frmSnake";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             Load += frmSnake_Load;
             KeyDown += frmSnake_KeyDown;
