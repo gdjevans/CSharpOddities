@@ -49,6 +49,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Load += frmBubbleBreaker_Load;
             Paint += Form_Paint;
+            MouseDown += Form_MouseDown;
             ResumeLayout(false);
             PerformLayout();
         }
