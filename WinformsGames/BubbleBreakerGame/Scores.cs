@@ -83,6 +83,32 @@ namespace BubbleBreakerGame
             return "Congratulations, your " + Score + " points is now the #" + GetPositionOfPlayerScore() + " score for " + NumOfBubbles +
                 " bubbles game board size!";
         }
+
+        public void WriteScore(string name)
+        {
+            AllScores.Remove(CURRENT_PLAYER);
+            var tempName = name;
+            var noMoreDuplicates = false;
+            var counter = 0;
+
+            while (!noMoreDuplicates)
+            {
+                if (AllScores.ContainsKey(tempName))
+                {
+                    counter++;
+                    tempName += counter.ToString();
+                }
+                else
+                    noMoreDuplicates = true;
+            }
+
+            name = tempName;
+
+            using (StreamWriter file = new StreamWriter(_fileName, true))
+            {
+                file.Write(name + ", " + Score + Environment.NewLine);
+            }
+        }
     }
 }
 

@@ -1,6 +1,7 @@
 using System.Xml;
 using System.Drawing.Drawing2D;
 using System.Runtime.InteropServices;
+using System.Text;
 
 namespace BubbleBreakerGame
 {
@@ -23,6 +24,7 @@ namespace BubbleBreakerGame
         int score;
         bool[,] isSelected;
         int numOfSelectedBubbles;
+        Scores scores;
 
         public frmBubbleBreaker()
         {
@@ -37,12 +39,31 @@ namespace BubbleBreakerGame
 
         private void frmBubbleBreaker_Load(object sender, EventArgs e)
         {
+            init()
+        }
+
+        private void init()
+        {
             SetClientSizeCore(NUM_BUBBLES * BUBBLE_SIZE, NUM_BUBBLES * BUBBLE_SIZE);
             FormBorderStyle = FormBorderStyle.FixedSingle; //disables form resizing
             MaximizeBox = false; //disables maximizing the form
             BackColor = Color.Black;
             DoubleBuffered = true; //prevents screen flickering
             Start();
+        }
+
+        private void GameOver()
+        {
+            scores = new Scores(score, NUM_BUBBLES);
+            StringBuilder sb = new StringBuilder();
+            sb.Append("*** GAME OVER ***");
+            sb.Append("\n");
+            sb.Append("*** TOP 3 Scores ***");
+            sb.Append(scores.GetTopThreeScores() + "\n");
+            sb.Append("\n");
+            sb.Append(scores.GetScoreMessage());
+
+            MessageBox.Show(sb.ToString());
         }
 
         private void Start()
@@ -146,7 +167,7 @@ namespace BubbleBreakerGame
 
                 if (!HasMoreMoves())
                 {
-                    MessageBox.Show("Game Over!!!");
+                    GameOver();
                 }
 
             }
