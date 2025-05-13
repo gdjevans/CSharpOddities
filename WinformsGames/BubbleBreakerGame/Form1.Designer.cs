@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             lblInfo = new Label();
+            txtName = new TextBox();
+            btnName = new Button();
             SuspendLayout();
             // 
             // lblInfo
@@ -39,11 +41,30 @@
             lblInfo.Size = new Size(0, 15);
             lblInfo.TabIndex = 0;
             // 
+            // txtName
+            // 
+            txtName.Location = new Point(357, 406);
+            txtName.Name = "txtName";
+            txtName.Size = new Size(100, 23);
+            txtName.TabIndex = 1;
+            // 
+            // btnName
+            // 
+            btnName.Location = new Point(367, 369);
+            btnName.Name = "btnName";
+            btnName.Size = new Size(75, 23);
+            btnName.TabIndex = 2;
+            btnName.Text = "button1";
+            btnName.UseVisualStyleBackColor = true;
+            btnName.Click += btnName_Click;
+            // 
             // frmBubbleBreaker
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnName);
+            Controls.Add(txtName);
             Controls.Add(lblInfo);
             Name = "frmBubbleBreaker";
             StartPosition = FormStartPosition.CenterScreen;
@@ -57,5 +78,7 @@
         #endregion
 
         private Label lblInfo;
+        private TextBox txtName;
+        private Button btnName;
     }
 }
