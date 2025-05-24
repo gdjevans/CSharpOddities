@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPong));
             picPlayer = new PictureBox();
             picComputer = new PictureBox();
             picDivider = new PictureBox();
             picBall = new PictureBox();
+            timer = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)picPlayer).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picComputer).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picDivider).BeginInit();
@@ -75,6 +77,11 @@
             picBall.TabIndex = 3;
             picBall.TabStop = false;
             // 
+            // timer
+            // 
+            timer.Enabled = true;
+            timer.Interval = 20;
+            // 
             // frmPong
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -88,6 +95,9 @@
             Name = "frmPong";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
+            Load += frmPong_Load;
+            KeyDown += Pong_KeyDown;
+            KeyUp += Pong_KeyUp;
             ((System.ComponentModel.ISupportInitialize)picPlayer).EndInit();
             ((System.ComponentModel.ISupportInitialize)picComputer).EndInit();
             ((System.ComponentModel.ISupportInitialize)picDivider).EndInit();
@@ -101,5 +111,6 @@
         private PictureBox picComputer;
         private PictureBox picDivider;
         private PictureBox picBall;
+        private System.Windows.Forms.Timer timer;
     }
 }
