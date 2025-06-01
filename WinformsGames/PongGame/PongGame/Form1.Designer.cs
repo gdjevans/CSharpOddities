@@ -81,6 +81,7 @@
             // 
             timer.Enabled = true;
             timer.Interval = 20;
+            timer.Tick += timer_Tick;
             // 
             // frmPong
             // 
@@ -89,9 +90,9 @@
             BackColor = Color.Gray;
             ClientSize = new Size(800, 450);
             Controls.Add(picBall);
-            Controls.Add(picDivider);
             Controls.Add(picComputer);
             Controls.Add(picPlayer);
+            Controls.Add(picDivider);
             Name = "frmPong";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
