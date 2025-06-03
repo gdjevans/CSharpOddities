@@ -9,13 +9,8 @@ namespace PongGame
         int pScore;
         int cScore;
         Random rand;
-        BallXY ballXY;
-
-        struct BallXY
-        {
-            public int x;
-            public int y;
-        }
+        
+        List<Ball> balls;
 
         public frmPong()
         {
@@ -25,8 +20,7 @@ namespace PongGame
             pScore = 0;
             cScore = 0;
             rand = new Random();
-            ballXY.x = 10;
-            ballXY.y = 10;
+            balls = new List<Ball>();
         }
 
         private void frmPong_Load(object sender, EventArgs e)
@@ -39,8 +33,7 @@ namespace PongGame
             picDivider.Top = 0;
             picDivider.Height = ClientSize.Height;
             picDivider.Left = (ClientSize.Width - picDivider.Width) / 2;
-            picBall.Left = (ClientSize.Width / 2) + 20;
-            picBall.Top = (ClientSize.Height - picBall.Height) / 2;
+            balls.Add(new Ball (this, picBall));
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
         }
@@ -74,8 +67,34 @@ namespace PongGame
         private void timer_Tick(object sender, EventArgs e)
         {
             this.Text = "Player: " + pScore + "  |  Computer: " + cScore;
-            picBall.Top -= ballXY.y;
-            picBall.Left -= ballXY.x;
+
+            if (balls.Count == 0)
+            {
+                balls.Add(new Ball(this, picBall));
+            }
+
+            for (int i = 0; i < balls.Count; i++)
+            {
+                balls[i].ball.Top -= balls[i].BallY;
+                balls[i].ball.Left -= balls[i].BallX;
+
+                // player scores
+                if (balls[i].ball.Left + balls[i].ball.Width > ClientSize.Width)
+                {
+                    balls[i].ball.Visible = false;
+                    balls.RemoveAt(i);
+                    pScore++;
+                }
+
+                // computer scores
+                else if (balls[i].ball.Left < 0)
+                {
+                    balls[i].ball.Visible = false;
+                    balls.RemoveAt(i);
+                    cScore++;
+                }
+            }
+
             picComputer.Top -= cPaddleSpeed;
 
             if (picComputer.Top < 0 || picComputer.Top > ClientSize.Height - picComputer.Height)
@@ -83,31 +102,23 @@ namespace PongGame
                 cPaddleSpeed = -cPaddleSpeed;
             }
 
-            //computer scores
-            if (picBall.Left < 0)
+            for (int i = 0; i < balls.Count; i++)
             {
-                picBall.Left = ((ClientSize.Width - picBall.Width) / 2) - 200;
-                picBall.Top = rand.Next(ClientSize.Height);
-                ballXY.x *= -1; // changes ball direction
-                cScore++;
-            }
+                if (balls[i].ball.Top < 0 || balls[i].ball.Top + balls[i].ball.Height > ClientSize.Height)
+                {
+                    balls[i].BallY *= -1; // bounces ball in the other direction
+                }
 
-            if (picBall.Left + picBall.Width > ClientSize.Width)
-            {
-                picBall.Left = ((ClientSize.Width - picBall.Width) / 2) + 200;
-                picBall.Top = rand.Next(ClientSize.Height);
-                ballXY.x *= -1; // changes ball direction
-                pScore++;
-            }
+                if (balls[i].ball.Bounds.IntersectsWith(picPlayer.Bounds))
+                {
+                    balls[i].BallX *= -1;
+                }
 
-            if (picBall.Top < 0 || picBall.Top + picBall.Height > ClientSize.Height)
-            {
-                ballXY.y *= -1; // bounces ball in the other direction
-            }
-
-            if (picBall.Bounds.IntersectsWith(picPlayer.Bounds) || picBall.Bounds.IntersectsWith(picComputer.Bounds))
-            {
-                ballXY.x *= -1;
+                if (balls[i].ball.Bounds.IntersectsWith(picComputer.Bounds))
+                {
+                    balls[i].BallX *= -1;
+                    balls.Add(new Ball(this, picBall));
+                }
             }
 
             if (goUp && picPlayer.Top > 0)
@@ -123,12 +134,14 @@ namespace PongGame
             if (pScore >= 10)
             {
                 timer.Stop();
+                this.Text = "Player: " + pScore + "  |  Computer: " + cScore;
                 MessageBox.Show("You Win!!");
             }
 
             if (cScore >= 10)
             {
                 timer.Stop();
+                this.Text = "Player: " + pScore + "  |  Computer: " + cScore;
                 MessageBox.Show("Computer is Winner!!! Hooray for our ROBOT Overlords!!!");
             }
         }
