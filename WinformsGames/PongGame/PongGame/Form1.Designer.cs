@@ -76,6 +76,7 @@
             picBall.Size = new Size(30, 30);
             picBall.TabIndex = 3;
             picBall.TabStop = false;
+            picBall.Visible = false;
             // 
             // timer
             // 
