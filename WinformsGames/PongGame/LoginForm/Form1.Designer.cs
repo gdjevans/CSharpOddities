@@ -49,6 +49,7 @@
             textBox2.Location = new Point(314, 188);
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
+            textBox2.PasswordChar = '*';
             textBox2.Size = new Size(368, 45);
             textBox2.TabIndex = 1;
             // 
@@ -62,6 +63,7 @@
             button1.TabIndex = 2;
             button1.Text = "Logout";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -73,6 +75,7 @@
             button2.TabIndex = 3;
             button2.Text = "Login";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // lblusername
             // 
