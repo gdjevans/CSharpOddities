@@ -30,15 +30,15 @@
         {
             components = new System.ComponentModel.Container();
             playGround = new Panel();
-            racket = new PictureBox();
-            ball = new PictureBox();
-            score_lbl = new Label();
-            points_lbl = new Label();
             gameOver_lbl = new Label();
+            points_lbl = new Label();
+            score_lbl = new Label();
+            ball = new PictureBox();
+            racket = new PictureBox();
             timer1 = new System.Windows.Forms.Timer(components);
             playGround.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)racket).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ball).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)racket).BeginInit();
             SuspendLayout();
             // 
             // playGround
@@ -54,33 +54,14 @@
             playGround.Size = new Size(800, 450);
             playGround.TabIndex = 0;
             // 
-            // racket
+            // gameOver_lbl
             // 
-            racket.BackColor = Color.Black;
-            racket.Location = new Point(300, 409);
-            racket.Name = "racket";
-            racket.Size = new Size(200, 20);
-            racket.TabIndex = 0;
-            racket.TabStop = false;
-            // 
-            // ball
-            // 
-            ball.BackColor = Color.Red;
-            ball.Location = new Point(80, 168);
-            ball.Name = "ball";
-            ball.Size = new Size(30, 30);
-            ball.TabIndex = 1;
-            ball.TabStop = false;
-            // 
-            // score_lbl
-            // 
-            score_lbl.AutoSize = true;
-            score_lbl.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            score_lbl.Location = new Point(12, 9);
-            score_lbl.Name = "score_lbl";
-            score_lbl.Size = new Size(156, 65);
-            score_lbl.TabIndex = 2;
-            score_lbl.Text = "Score:";
+            gameOver_lbl.Font = new Font("Segoe UI", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            gameOver_lbl.Location = new Point(287, 52);
+            gameOver_lbl.Name = "gameOver_lbl";
+            gameOver_lbl.Size = new Size(319, 273);
+            gameOver_lbl.TabIndex = 4;
+            gameOver_lbl.Text = "Game Over!\r\n\r\nF1 - Restart Game\r\n\r\nEsc - Exit\r\n";
             // 
             // points_lbl
             // 
@@ -92,14 +73,37 @@
             points_lbl.TabIndex = 3;
             points_lbl.Text = "0";
             // 
-            // gameOver_lbl
+            // score_lbl
             // 
-            gameOver_lbl.Font = new Font("Segoe UI", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            gameOver_lbl.Location = new Point(287, 52);
-            gameOver_lbl.Name = "gameOver_lbl";
-            gameOver_lbl.Size = new Size(319, 273);
-            gameOver_lbl.TabIndex = 4;
-            gameOver_lbl.Text = "Game Over!\r\n\r\nF1 - Restart Game\r\n\r\nEsc - Exit\r\n";
+            score_lbl.AutoSize = true;
+            score_lbl.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            score_lbl.Location = new Point(12, 9);
+            score_lbl.Name = "score_lbl";
+            score_lbl.Size = new Size(156, 65);
+            score_lbl.TabIndex = 2;
+            score_lbl.Text = "Score:";
+            // 
+            // ball
+            // 
+            ball.BackColor = Color.Red;
+            ball.Location = new Point(80, 168);
+            ball.Name = "ball";
+            ball.Size = new Size(30, 30);
+            ball.TabIndex = 1;
+            ball.TabStop = false;
+            // 
+            // racket
+            // 
+            racket.BackColor = Color.Black;
+            racket.Location = new Point(300, 409);
+            racket.Name = "racket";
+            racket.Size = new Size(200, 20);
+            racket.TabIndex = 0;
+            racket.TabStop = false;
+            // 
+            // timer1
+            // 
+            timer1.Tick += timer1_Tick;
             // 
             // gameForm
             // 
@@ -109,10 +113,11 @@
             Controls.Add(playGround);
             Name = "gameForm";
             Text = "Ping Pong Game";
+            KeyDown += gameForm_KeyDown;
             playGround.ResumeLayout(false);
             playGround.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)racket).EndInit();
             ((System.ComponentModel.ISupportInitialize)ball).EndInit();
+            ((System.ComponentModel.ISupportInitialize)racket).EndInit();
             ResumeLayout(false);
         }
 
