@@ -12,6 +12,9 @@ namespace PingPong
         {
             InitializeComponent();
 
+            timer1.Enabled = true;
+            Cursor.Hide();
+
             this.FormBorderStyle = FormBorderStyle.None;
             this.TopMost = true;
             this.Bounds = Screen.PrimaryScreen.Bounds;
