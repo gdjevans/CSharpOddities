@@ -64,8 +64,8 @@
             this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(128, 63);
-            this.toolStripButton1.Text = "Register Data";
+            this.toolStripButton1.Size = new System.Drawing.Size(143, 63);
+            this.toolStripButton1.Text = "Register Data F2";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // toolStripButton2
@@ -74,8 +74,8 @@
             this.toolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(94, 63);
-            this.toolStripButton2.Text = "Search";
+            this.toolStripButton2.Size = new System.Drawing.Size(109, 63);
+            this.toolStripButton2.Text = "Search F3";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // toolStripButton3
@@ -84,8 +84,8 @@
             this.toolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(113, 63);
-            this.toolStripButton3.Text = "Calculator";
+            this.toolStripButton3.Size = new System.Drawing.Size(128, 63);
+            this.toolStripButton3.Text = "Calculator F4";
             this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // toolStripButton4
@@ -94,8 +94,8 @@
             this.toolStripButton4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(92, 63);
-            this.toolStripButton4.Text = "About";
+            this.toolStripButton4.Size = new System.Drawing.Size(107, 63);
+            this.toolStripButton4.Text = "About F5";
             this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
             // toolStripButton5
@@ -105,8 +105,8 @@
             this.toolStripButton5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(78, 63);
-            this.toolStripButton5.Text = "Exit";
+            this.toolStripButton5.Size = new System.Drawing.Size(108, 63);
+            this.toolStripButton5.Text = "Exit [ESC]";
             this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
             // 
             // toolStripSeparator1
@@ -143,6 +143,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
