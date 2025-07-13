@@ -48,5 +48,35 @@ namespace PhoneBook
             this.process1.StartInfo.FileName = "C:\\Windows\\System32\\calc.exe";
             this.process1.Start();
         }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F2)
+            {
+                toolStripButton1_Click (sender, e);
+            }
+            // ------------------------------------
+            if (e.KeyCode == Keys.F3)
+            {
+                toolStripButton2_Click (sender, e);
+            }
+            // ------------------------------------
+            if (e.KeyCode == Keys.F4)
+            {
+                toolStripButton3_Click (sender, e);
+            }
+            // ------------------------------------
+            if (e.KeyCode == Keys.F5)
+            {
+                toolStripButton4_Click (sender, e);
+            }
+            // ------------------------------------
+            if (e.KeyCode == Keys.Escape)
+            {
+                toolStripButton5_Click (sender, e); 
+            }
+            // ------------------------------------
+        }
+
     }
 }
