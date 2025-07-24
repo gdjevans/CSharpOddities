@@ -46,5 +46,31 @@ namespace FormatString
 
             this.textBox4.Text = i.ToString("#,#");
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Int64 i;
+            Boolean b;
+            b = Int64.TryParse(textBox5.Text, out i);
+            //MessageBox.Show(b.ToString());
+            if(b)
+            {
+                MessageBox.Show("This is number");
+            }
+            else { MessageBox.Show("This not number, must be something else? Maybe it's a duck?"); }
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();   
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Are you snore?", "Alert", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
     }
 }
