@@ -12,9 +12,21 @@ namespace BrickBreaker
 {
     public partial class frmArkanoid : Form
     {
+        List<Brick> bricks;
+        const int NumOfBricks = 20;
+
         public frmArkanoid()
         {
             InitializeComponent();
+            bricks = new List<Brick>();
+        }
+
+        private void frmArkanoid_Load(object sender, EventArgs e)
+        {
+            for (int i = 0; i < NumOfBricks; i++)
+            {
+                bricks.Add(new Brick(this));
+            }
         }
     }
 }

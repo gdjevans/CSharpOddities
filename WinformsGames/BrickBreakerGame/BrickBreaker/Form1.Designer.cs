@@ -60,6 +60,7 @@
             this.Name = "frmArkanoid";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Arkanoid";
+            this.Load += new System.EventHandler(this.frmArkanoid_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picBall)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
