@@ -14,11 +14,13 @@ namespace BrickBreaker
     {
         List<Brick> bricks;
         const int NumOfBricks = 20;
+        Paddle paddle;
 
         public frmArkanoid()
         {
             InitializeComponent();
             bricks = new List<Brick>();
+            paddle = new Paddle(this);
         }
 
         private void frmArkanoid_Load(object sender, EventArgs e)
@@ -27,6 +29,11 @@ namespace BrickBreaker
             {
                 bricks.Add(new Brick(this));
             }
+        }
+
+        private void Key_Down(object sender, KeyEventArgs e)
+        {
+            paddle.PaddleMove(e);
         }
     }
 }
