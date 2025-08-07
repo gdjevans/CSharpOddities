@@ -1,0 +1,39 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Settings.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="co_title" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Test Co.</Value>
+    </Setting>
+    <Setting Name="co_manager" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Parker</Value>
+    </Setting>
+    <Setting Name="co_adv" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Best Office Software</Value>
+    </Setting>
+    <Setting Name="co_tel" Type="System.String" Scope="User">
+      <Value Profile="(Default)">+44 8696 456339</Value>
+    </Setting>
+    <Setting Name="co_cell" Type="System.String" Scope="User">
+      <Value Profile="(Default)">+32 9966 999999</Value>
+    </Setting>
+    <Setting Name="co_fax" Type="System.String" Scope="User">
+      <Value Profile="(Default)">+32 2133 985233</Value>
+    </Setting>
+    <Setting Name="co_activity" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Software</Value>
+    </Setting>
+    <Setting Name="co_email" Type="System.String" Scope="User">
+      <Value Profile="(Default)">test@gmail.com</Value>
+    </Setting>
+    <Setting Name="co_website" Type="System.String" Scope="User">
+      <Value Profile="(Default)">kacillamasoft.com</Value>
+    </Setting>
+    <Setting Name="co_address" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Montarrey, USA</Value>
+    </Setting>
+    <Setting Name="co_lang" Type="System.String" Scope="User">
+      <Value Profile="(Default)">EN</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
