@@ -24,12 +24,32 @@ namespace ClipboardExample
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.textBox2.Text = Clipboard.GetText();
+            Boolean b = Clipboard.ContainsText();
+            if (b)
+            {
+                this.textBox2.Text = Clipboard.GetText();
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Clipboard.SetImage(this.pictureBox1.BackgroundImage);
+            Clipboard.SetImage(this.pictureBox1.Image);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Boolean b = Clipboard.ContainsImage();
+            if (b)
+            {
+                this.pictureBox1.Image = Clipboard.GetImage();
+                this.BackgroundImage = this.pictureBox1.Image;
+                this.BackgroundImageLayout = ImageLayout.Stretch;
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Clipboard.Clear();
         }
     }
 }
