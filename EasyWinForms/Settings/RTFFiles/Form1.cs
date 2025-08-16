@@ -108,5 +108,22 @@ namespace RTFFiles
         {
             this.richTextBox1.Paste();
         }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            this.richTextBox1.Undo();
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            this.richTextBox1.Redo();
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            string fn;
+            fn = Application.StartupPath + "\\testpage.rtf";
+            this.richTextBox1.SaveFile(fn);
+        }
     }
 }
