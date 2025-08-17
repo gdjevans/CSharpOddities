@@ -34,5 +34,33 @@ namespace Methods
             rn = fn + sn;
             return rn;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            sum_calc2();
+        }
+        public void sum_calc2()
+        {
+            Int32 fn;
+            Int32 sn;
+            Int32 rn;
+            // ----------------
+            Int32.TryParse(textBox1.Text, out fn);
+            Int32.TryParse(textBox2.Text, out sn);
+            // ----------------
+            rn = fn + sn;
+            this.textBox3.Text = rn.ToString();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            myClass.myMsg();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.ShowDialog();
+        }
     }
 }
