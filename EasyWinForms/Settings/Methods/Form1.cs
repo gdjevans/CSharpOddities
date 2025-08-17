@@ -19,19 +19,20 @@ namespace Methods
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.textBox3.Text = sum_calc().ToString();
-        }
-
-        public Int32 sum_calc()
-        {
             Int32 fn;
             Int32 sn;
-            Int32 rn;
             // ----------------
             Int32.TryParse(textBox1.Text, out fn);
             Int32.TryParse(textBox2.Text, out sn);
             // ----------------
-            rn = fn + sn;
+            this.textBox3.Text = sum_calc(fn, sn).ToString();
+        }
+
+        public Int32 sum_calc(Int32 fnum, Int32 snum)
+        {
+            Int32 rn;
+            // ----------------
+            rn = fnum + snum;
             return rn;
         }
 
