@@ -21,5 +21,21 @@ namespace Methods
         {
             myClass.myMsg();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Int32 fn;
+            Int32 sn;
+            // ----------------
+            Int32.TryParse(textBox1.Text, out fn);
+            Int32.TryParse(textBox2.Text, out sn);
+            // ----------------
+            this.textBox3.Text = myClass.sum_calc(fn, sn).ToString();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.textBox3.Text = myClass.sum_calcTextbox(this.textBox1, this.textBox2).ToString();
+        }
     }
 }

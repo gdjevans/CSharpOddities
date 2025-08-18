@@ -25,15 +25,7 @@ namespace Methods
             Int32.TryParse(textBox1.Text, out fn);
             Int32.TryParse(textBox2.Text, out sn);
             // ----------------
-            this.textBox3.Text = sum_calc(fn, sn).ToString();
-        }
-
-        public Int32 sum_calc(Int32 fnum, Int32 snum)
-        {
-            Int32 rn;
-            // ----------------
-            rn = fnum + snum;
-            return rn;
+            this.textBox3.Text = myClass.sum_calc(fn, sn).ToString();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -62,6 +54,16 @@ namespace Methods
         {
             Form2 form2 = new Form2();
             form2.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.textBox3.Text = myClass.sum_calcTextbox(this.textBox1, this.textBox2).ToString();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            myClass.msg_textbox(this.textBox4);
         }
     }
 }
