@@ -116,5 +116,8 @@
   <ItemGroup>
     <None Include="Resources\216171_device_desktop_icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
