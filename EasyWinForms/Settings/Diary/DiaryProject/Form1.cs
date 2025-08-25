@@ -48,6 +48,7 @@ namespace DiaryProject
             // -------- Populate Sidebar Calendar with System Date ---------
             getCalendar();
             // -------------------------------------------------------------
+            this.lblVersion.Text = Application.ProductVersion;
         }
 
         public void getTime()
