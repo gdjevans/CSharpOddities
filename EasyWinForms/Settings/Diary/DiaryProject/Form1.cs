@@ -49,6 +49,33 @@ namespace DiaryProject
             getCalendar();
             // -------------------------------------------------------------
             this.lblVersion.Text = Application.ProductVersion;
+            // --------------- Populate Background Image -------------------
+            Int32 si;
+            si = DiaryProject.Properties.Settings.Default.selectedBakImg;
+            loadBak(si);
+            // -------------------------------------------------------------
+            backgroundComboLoader();
+            this.comboBox1.SelectedIndex = si;
+            // -------------------------------------------------------------
+
+        }
+
+        public void backgroundComboLoader()
+        {
+            Int32 i;
+            for (i = 1; i <= 4; i++)
+            {
+                this.comboBox1.Items.Add("Image " + i.ToString());
+            }
+        }
+
+        public void loadBak(Int32 comboIndex)
+        {
+            string fn;
+            comboIndex = comboIndex + 1;
+            fn = Application.StartupPath + "\\data\\pics\\" + comboIndex.ToString() + ".jpg";
+            this.BackgroundImage = Image.FromFile(fn);
+            this.BackgroundImageLayout = ImageLayout.Stretch;
         }
 
         public void getTime()
@@ -126,6 +153,17 @@ namespace DiaryProject
             this.lblMonthName.Text = monthNumToName(m);
             this.lblDayDate.Text = g.GetDayOfMonth(DateTime.Now).ToString();
             this.lblDayName.Text = g.GetDayOfWeek(DateTime.Now).ToString();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Int32 si;
+            si = comboBox1.SelectedIndex;   
+            loadBak(si);
+            // ------------------- Saving -----------------------
+            DiaryProject.Properties.Settings.Default.selectedBakImg = si;
+            DiaryProject.Properties.Settings.Default.Save();
+            // --------------------------------------------------
         }
     }
 }
