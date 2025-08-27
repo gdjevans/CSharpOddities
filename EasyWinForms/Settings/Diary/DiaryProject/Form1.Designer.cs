@@ -29,7 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cboMusic = new System.Windows.Forms.ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblDayName = new System.Windows.Forms.Label();
             this.lblYear = new System.Windows.Forms.Label();
@@ -38,6 +43,8 @@
             this.lblTimer = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.lblVersion = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -53,9 +60,10 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -64,6 +72,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.lblTimer);
             this.panel1.Controls.Add(this.button3);
@@ -73,6 +82,47 @@
             this.panel1.Size = new System.Drawing.Size(162, 501);
             this.panel1.TabIndex = 0;
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.button4);
+            this.panel4.Controls.Add(this.axWindowsMediaPlayer1);
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Controls.Add(this.cboMusic);
+            this.panel4.Location = new System.Drawing.Point(-1, 316);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(162, 132);
+            this.panel4.TabIndex = 5;
+            // 
+            // axWindowsMediaPlayer1
+            // 
+            this.axWindowsMediaPlayer1.Enabled = true;
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(3, 3);
+            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
+            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(154, 98);
+            this.axWindowsMediaPlayer1.TabIndex = 6;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.Location = new System.Drawing.Point(3, 110);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(38, 18);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Musik: ";
+            // 
+            // cboMusic
+            // 
+            this.cboMusic.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cboMusic.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cboMusic.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboMusic.FormattingEnabled = true;
+            this.cboMusic.Location = new System.Drawing.Point(41, 107);
+            this.cboMusic.Name = "cboMusic";
+            this.cboMusic.Size = new System.Drawing.Size(73, 21);
+            this.cboMusic.TabIndex = 7;
+            this.cboMusic.SelectedIndexChanged += new System.EventHandler(this.cboMusic_SelectedIndexChanged);
+            // 
             // panel3
             // 
             this.panel3.BackgroundImage = global::DiaryProject.Properties.Resources.calendar;
@@ -81,9 +131,9 @@
             this.panel3.Controls.Add(this.lblYear);
             this.panel3.Controls.Add(this.lblMonthName);
             this.panel3.Controls.Add(this.lblDayDate);
-            this.panel3.Location = new System.Drawing.Point(-1, 180);
+            this.panel3.Location = new System.Drawing.Point(-1, 128);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(162, 160);
+            this.panel3.Size = new System.Drawing.Size(162, 153);
             this.panel3.TabIndex = 5;
             // 
             // lblDayName
@@ -171,6 +221,28 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(740, 46);
             this.panel2.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(529, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(71, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Background: ";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(606, 10);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 5;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // lblVersion
             // 
@@ -323,27 +395,15 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // comboBox1
+            // button4
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(606, 10);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 5;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(529, 13);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 13);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Background: ";
+            this.button4.Location = new System.Drawing.Point(114, 105);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(43, 23);
+            this.button4.TabIndex = 9;
+            this.button4.Text = "Load";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Form1
             // 
@@ -366,6 +426,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -403,6 +465,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBox1;
+        private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cboMusic;
+        private System.Windows.Forms.Button button4;
     }
 }
 

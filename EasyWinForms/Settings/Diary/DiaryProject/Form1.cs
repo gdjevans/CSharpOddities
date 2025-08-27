@@ -56,8 +56,15 @@ namespace DiaryProject
             // -------------------------------------------------------------
             backgroundComboLoader();
             this.comboBox1.SelectedIndex = si;
+            // ---------------- Populate Music Combobox --------------------
+            musicComboLoader();
             // -------------------------------------------------------------
-
+            // ---------------- Populate Music Combobox --------------------
+            Int32 sm;
+            sm = DiaryProject.Properties.Settings.Default.selectedMusIndex;
+            this.cboMusic.SelectedIndex = sm;
+            musicLoader(sm);
+            // -------------------------------------------------------------
         }
 
         public void backgroundComboLoader()
@@ -66,6 +73,15 @@ namespace DiaryProject
             for (i = 1; i <= 4; i++)
             {
                 this.comboBox1.Items.Add("Image " + i.ToString());
+            }
+        }
+
+        public void musicComboLoader()
+        {
+            Int32 i;
+            for (i = 1; i <= 2; i++)
+            {
+                this.cboMusic.Items.Add("Music " + i.ToString());
             }
         }
 
@@ -164,6 +180,26 @@ namespace DiaryProject
             DiaryProject.Properties.Settings.Default.selectedBakImg = si;
             DiaryProject.Properties.Settings.Default.Save();
             // --------------------------------------------------
+        }
+
+        private void cboMusic_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        public void musicLoader(Int32 comboIndex)
+        {
+            string fn;
+            comboIndex = comboIndex + 1;
+            fn = Application.StartupPath + "\\data\\music\\" + comboIndex.ToString() + ".mp3";
+            this.axWindowsMediaPlayer1.URL = fn;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            musicLoader(this.cboMusic.SelectedIndex);
+            DiaryProject.Properties.Settings.Default.selectedMusIndex = this.cboMusic.SelectedIndex;
+            DiaryProject.Properties.Settings.Default.Save();
         }
     }
 }

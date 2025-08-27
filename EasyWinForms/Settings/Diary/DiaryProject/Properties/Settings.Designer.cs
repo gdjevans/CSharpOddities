@@ -34,5 +34,17 @@ namespace DiaryProject.Properties {
                 this["selectedBakImg"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int selectedMusIndex {
+            get {
+                return ((int)(this["selectedMusIndex"]));
+            }
+            set {
+                this["selectedMusIndex"] = value;
+            }
+        }
     }
 }
