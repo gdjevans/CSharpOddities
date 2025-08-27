@@ -223,3 +223,4 @@ project.lock.json
 # End of core ignore list, below put you custom 'per project' settings (patterns or path)
 #####
 EasyWinForms/Debugging/WinMediaPlayerApp/NalepaRemix.mp3
+EasyWinForms/Settings/Diary/DiaryProject/data/music/
