@@ -8,5 +8,14 @@
     <Setting Name="selectedMusIndex" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
+    <Setting Name="copyright" Type="System.String" Scope="User">
+      <Value Profile="(Default)">2025</Value>
+    </Setting>
+    <Setting Name="programmerName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Grey Liaisons</Value>
+    </Setting>
+    <Setting Name="designerName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Pillow Talk</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

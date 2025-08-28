@@ -201,5 +201,12 @@ namespace DiaryProject
             DiaryProject.Properties.Settings.Default.selectedMusIndex = this.cboMusic.SelectedIndex;
             DiaryProject.Properties.Settings.Default.Save();
         }
+
+        private void aboutUsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DiaryProject.otherForms.AboutUs ab_Form = new otherForms.AboutUs();
+            ab_Form.MdiParent = this;
+            ab_Form.ShowDialog();
+        }
     }
 }
