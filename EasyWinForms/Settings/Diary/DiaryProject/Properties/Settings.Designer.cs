@@ -46,5 +46,41 @@ namespace DiaryProject.Properties {
                 this["selectedMusIndex"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("2025")]
+        public string copyright {
+            get {
+                return ((string)(this["copyright"]));
+            }
+            set {
+                this["copyright"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Grey Liaisons")]
+        public string programmerName {
+            get {
+                return ((string)(this["programmerName"]));
+            }
+            set {
+                this["programmerName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Pillow Talk")]
+        public string designerName {
+            get {
+                return ((string)(this["designerName"]));
+            }
+            set {
+                this["designerName"] = value;
+            }
+        }
     }
 }
