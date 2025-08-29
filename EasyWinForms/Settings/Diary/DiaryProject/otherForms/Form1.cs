@@ -65,6 +65,16 @@ namespace DiaryProject
             this.cboMusic.SelectedIndex = sm;
             musicLoader(sm);
             // -------------------------------------------------------------
+            userInfoLoader();
+        }
+
+        public void userInfoLoader()
+        {
+            this.label5.Text = DiaryProject.Properties.Settings.Default.userName;
+            // ----------------- Load user pic ------------------
+            string df;
+            df = Application.StartupPath + "\\data\\userPics\\1.jpg";
+            this.pictureBox1.Load(df);
         }
 
         public void backgroundComboLoader()
@@ -206,7 +216,14 @@ namespace DiaryProject
         {
             DiaryProject.otherForms.AboutUs ab_Form = new otherForms.AboutUs();
             ab_Form.MdiParent = this;
-            ab_Form.ShowDialog();
+            ab_Form.Show();
+        }
+
+        private void usersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DiaryProject.otherForms.Users users_Form = new otherForms.Users();
+            users_Form.MdiParent = this;
+            users_Form.Show();
         }
     }
 }

@@ -16,7 +16,7 @@ namespace DiaryProject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DiaryProject.otherForms.AboutUs());
+            Application.Run(new DiaryProject.Form1());
         }
     }
 }

@@ -103,6 +103,26 @@ namespace DiaryProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _285657_floppy_guardar_save_icon {
+            get {
+                object obj = ResourceManager.GetObject("_285657_floppy_guardar_save_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _326688_floppy_save_guardar_icon {
+            get {
+                object obj = ResourceManager.GetObject("_326688_floppy_save_guardar_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _34217_close_delete_remove_icon {
             get {
                 object obj = ResourceManager.GetObject("_34217_close_delete_remove_icon", resourceCulture);
