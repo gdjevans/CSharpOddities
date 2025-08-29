@@ -17,5 +17,11 @@
     <Setting Name="designerName" Type="System.String" Scope="User">
       <Value Profile="(Default)">Pillow Talk</Value>
     </Setting>
+    <Setting Name="userName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Admin</Value>
+    </Setting>
+    <Setting Name="userPass" Type="System.String" Scope="User">
+      <Value Profile="(Default)">password02</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

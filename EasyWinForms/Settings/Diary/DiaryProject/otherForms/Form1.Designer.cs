@@ -43,6 +43,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
@@ -60,18 +61,24 @@
             this.lblMonthName = new System.Windows.Forms.Label();
             this.lblDayDate = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.lblTimer);
@@ -79,7 +86,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(162, 501);
+            this.panel1.Size = new System.Drawing.Size(162, 600);
             this.panel1.TabIndex = 0;
             // 
             // panel4
@@ -88,7 +95,7 @@
             this.panel4.Controls.Add(this.axWindowsMediaPlayer1);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.cboMusic);
-            this.panel4.Location = new System.Drawing.Point(-1, 316);
+            this.panel4.Location = new System.Drawing.Point(-1, 417);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(162, 132);
             this.panel4.TabIndex = 5;
@@ -129,7 +136,7 @@
             this.lblTimer.BackColor = System.Drawing.Color.Black;
             this.lblTimer.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTimer.ForeColor = System.Drawing.Color.White;
-            this.lblTimer.Location = new System.Drawing.Point(0, 75);
+            this.lblTimer.Location = new System.Drawing.Point(0, 42);
             this.lblTimer.Name = "lblTimer";
             this.lblTimer.Size = new System.Drawing.Size(161, 50);
             this.lblTimer.TabIndex = 1;
@@ -144,7 +151,7 @@
             this.panel2.Controls.Add(this.lblVersion);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(162, 455);
+            this.panel2.Location = new System.Drawing.Point(162, 554);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(740, 46);
             this.panel2.TabIndex = 1;
@@ -211,6 +218,15 @@
             this.timer1.Enabled = true;
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // axWindowsMediaPlayer1
+            // 
+            this.axWindowsMediaPlayer1.Enabled = true;
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(3, 3);
+            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
+            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(154, 98);
+            this.axWindowsMediaPlayer1.TabIndex = 6;
             // 
             // button2
             // 
@@ -293,8 +309,9 @@
             // usersToolStripMenuItem
             // 
             this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
-            this.usersToolStripMenuItem.Size = new System.Drawing.Size(102, 22);
+            this.usersToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.usersToolStripMenuItem.Text = "Users";
+            this.usersToolStripMenuItem.Click += new System.EventHandler(this.usersToolStripMenuItem_Click);
             // 
             // toolStripButton5
             // 
@@ -313,14 +330,14 @@
             // aboutUsToolStripMenuItem
             // 
             this.aboutUsToolStripMenuItem.Name = "aboutUsToolStripMenuItem";
-            this.aboutUsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutUsToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.aboutUsToolStripMenuItem.Text = "About Us";
             this.aboutUsToolStripMenuItem.Click += new System.EventHandler(this.aboutUsToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // panel3
@@ -331,7 +348,7 @@
             this.panel3.Controls.Add(this.lblYear);
             this.panel3.Controls.Add(this.lblMonthName);
             this.panel3.Controls.Add(this.lblDayDate);
-            this.panel3.Location = new System.Drawing.Point(-1, 128);
+            this.panel3.Location = new System.Drawing.Point(-1, 104);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(162, 153);
             this.panel3.TabIndex = 5;
@@ -376,7 +393,7 @@
             this.lblDayDate.BackColor = System.Drawing.Color.Transparent;
             this.lblDayDate.Font = new System.Drawing.Font("Microsoft Tai Le", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDayDate.ForeColor = System.Drawing.Color.Black;
-            this.lblDayDate.Location = new System.Drawing.Point(12, 49);
+            this.lblDayDate.Location = new System.Drawing.Point(12, 48);
             this.lblDayDate.Name = "lblDayDate";
             this.lblDayDate.Size = new System.Drawing.Size(136, 76);
             this.lblDayDate.TabIndex = 2;
@@ -389,7 +406,7 @@
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.Image = global::DiaryProject.Properties.Resources._216171_device_desktop_icon;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.Location = new System.Drawing.Point(-1, 454);
+            this.button3.Location = new System.Drawing.Point(-1, 553);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(162, 41);
             this.button3.TabIndex = 0;
@@ -397,21 +414,49 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // axWindowsMediaPlayer1
+            // panel5
             // 
-            this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(3, 3);
-            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
-            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(154, 98);
-            this.axWindowsMediaPlayer1.TabIndex = 6;
+            this.panel5.Controls.Add(this.label5);
+            this.panel5.Controls.Add(this.label4);
+            this.panel5.Controls.Add(this.pictureBox1);
+            this.panel5.Location = new System.Drawing.Point(-1, 264);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(162, 135);
+            this.panel5.TabIndex = 6;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(41, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(73, 77);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 94);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(69, 13);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "User Name - ";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(79, 94);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(0, 13);
+            this.label5.TabIndex = 2;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(902, 501);
+            this.ClientSize = new System.Drawing.Size(902, 600);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.toolStrip1);
@@ -433,8 +478,11 @@
             this.panel2.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -472,6 +520,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cboMusic;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label5;
     }
 }
 
