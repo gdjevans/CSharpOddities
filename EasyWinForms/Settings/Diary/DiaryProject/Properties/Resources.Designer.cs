@@ -143,6 +143,16 @@ namespace DiaryProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _3994382_access_close_exit_logout_sign_out_icon {
+            get {
+                object obj = ResourceManager.GetObject("_3994382_access_close_exit_logout_sign_out_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _61439_minus_icon {
             get {
                 object obj = ResourceManager.GetObject("_61439_minus_icon", resourceCulture);
@@ -186,6 +196,16 @@ namespace DiaryProject.Properties {
         internal static System.Drawing.Bitmap _9073534_minimise_icon {
             get {
                 object obj = ResourceManager.GetObject("_9073534_minimise_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _9111267_shield_ok_icon {
+            get {
+                object obj = ResourceManager.GetObject("_9111267_shield_ok_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
