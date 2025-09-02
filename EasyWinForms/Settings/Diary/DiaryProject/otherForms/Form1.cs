@@ -42,6 +42,11 @@ namespace DiaryProject
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // ---------------- Load Login Form ---------------------
+            DiaryProject.otherForms.Login loginForm = new otherForms.Login();
+            loginForm.ShowDialog();
+            // -------------------------------------------------------------
+
             // ---------------- Populate Sidebar Clock ---------------------
             getTime();
             // -------------------------------------------------------------
@@ -60,10 +65,10 @@ namespace DiaryProject
             musicComboLoader();
             // -------------------------------------------------------------
             // ---------------- Populate Music Combobox --------------------
-            Int32 sm;
-            sm = DiaryProject.Properties.Settings.Default.selectedMusIndex;
-            this.cboMusic.SelectedIndex = sm;
-            musicLoader(sm);
+            //Int32 sm;
+            //sm = DiaryProject.Properties.Settings.Default.selectedMusIndex;
+            //this.cboMusic.SelectedIndex = sm;
+            //musicLoader(sm);
             // -------------------------------------------------------------
             userInfoLoader();
         }
