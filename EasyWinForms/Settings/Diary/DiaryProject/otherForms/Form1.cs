@@ -230,5 +230,18 @@ namespace DiaryProject
             users_Form.MdiParent = this;
             users_Form.Show();
         }
+
+        private void lockApplicationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // ---------------- Load Login Form ---------------------
+            DiaryProject.otherForms.Login loginForm = new otherForms.Login();
+            loginForm.ShowDialog();
+            // -------------------------------------------------------------
+        }
+
+        private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Refresh();
+        }
     }
 }
