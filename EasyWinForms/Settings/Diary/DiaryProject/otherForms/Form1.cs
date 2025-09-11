@@ -243,5 +243,13 @@ namespace DiaryProject
         {
             this.Refresh();
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            DiaryProject.otherForms.Memo mf;
+            mf = new otherForms.Memo();
+            mf.MdiParent = this;
+            mf.Show();
+        }
     }
 }
