@@ -64,6 +64,12 @@
     <Compile Include="otherForms\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="otherForms\Memo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="otherForms\Memo.Designer.cs">
+      <DependentUpon>Memo.cs</DependentUpon>
+    </Compile>
     <Compile Include="otherForms\Users.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="otherForms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="otherForms\Memo.resx">
+      <DependentUpon>Memo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="otherForms\Users.resx">
       <DependentUpon>Users.cs</DependentUpon>
@@ -203,6 +212,48 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\3994382_access_close_exit_logout_sign out_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text_align_center_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\content_paste_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text_align_left_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text_align_justify_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copy_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text_align_right_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\color_font_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undo_arrow_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redo_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\increase_indent_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\decrease_indent_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\font_size_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
