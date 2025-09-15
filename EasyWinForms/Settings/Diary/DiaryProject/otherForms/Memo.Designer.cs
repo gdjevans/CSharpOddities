@@ -275,21 +275,25 @@
             // 
             // btnNew
             // 
+            this.btnNew.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNew.Location = new System.Drawing.Point(15, 12);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(90, 33);
             this.btnNew.TabIndex = 1;
             this.btnNew.Text = "New Memo (F2)";
             this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // btnSave
             // 
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSave.Location = new System.Drawing.Point(121, 12);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(90, 33);
             this.btnSave.TabIndex = 0;
             this.btnSave.Text = "Save (F5)";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // groupBox1
             // 
@@ -299,6 +303,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.richTextBox1);
             this.groupBox1.Controls.Add(this.toolStrip1);
+            this.groupBox1.Enabled = false;
             this.groupBox1.Location = new System.Drawing.Point(6, 71);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(558, 388);
@@ -351,6 +356,7 @@
             this.Name = "Memo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Memo Registration";
+            this.Load += new System.EventHandler(this.Memo_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);

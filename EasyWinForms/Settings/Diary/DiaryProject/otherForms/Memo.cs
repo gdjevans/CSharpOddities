@@ -85,5 +85,25 @@ namespace DiaryProject.otherForms
         {
             this.richTextBox1.Redo();
         }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            this.groupBox1.Enabled = true;
+            this.btnNew.Enabled = false;
+            this.btnSave.Enabled = true;
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            this.groupBox1.Enabled = false;
+            this.btnSave.Enabled = false;
+            this.btnNew.Enabled = true;
+        }
+
+        private void Memo_Load(object sender, EventArgs e)
+        {
+            this.groupBox1.Enabled = false;
+            this.btnSave.Enabled = false;
+        }
     }
 }
