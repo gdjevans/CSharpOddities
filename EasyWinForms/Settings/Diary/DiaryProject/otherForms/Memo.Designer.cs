@@ -57,6 +57,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btn_Reset = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -85,7 +88,7 @@
             this.toolStripButton11,
             this.toolStripButton12,
             this.toolStripSeparator5});
-            this.toolStrip1.Location = new System.Drawing.Point(9, 98);
+            this.toolStrip1.Location = new System.Drawing.Point(9, 117);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(540, 44);
             this.toolStrip1.TabIndex = 0;
@@ -257,7 +260,7 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(9, 145);
+            this.richTextBox1.Location = new System.Drawing.Point(9, 164);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(540, 237);
             this.richTextBox1.TabIndex = 1;
@@ -265,6 +268,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btn_Reset);
             this.panel1.Controls.Add(this.btnNew);
             this.panel1.Controls.Add(this.btnSave);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -297,6 +301,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtId);
+            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtDate);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtTitle);
@@ -306,14 +312,14 @@
             this.groupBox1.Enabled = false;
             this.groupBox1.Location = new System.Drawing.Point(6, 71);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(558, 388);
+            this.groupBox1.Size = new System.Drawing.Size(558, 411);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Memo Details";
             // 
             // txtDate
             // 
-            this.txtDate.Location = new System.Drawing.Point(123, 56);
+            this.txtDate.Location = new System.Drawing.Point(126, 85);
             this.txtDate.Name = "txtDate";
             this.txtDate.Size = new System.Drawing.Size(382, 20);
             this.txtDate.TabIndex = 5;
@@ -321,7 +327,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(52, 59);
+            this.label2.Location = new System.Drawing.Point(55, 88);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 13);
             this.label2.TabIndex = 4;
@@ -329,7 +335,7 @@
             // 
             // txtTitle
             // 
-            this.txtTitle.Location = new System.Drawing.Point(123, 30);
+            this.txtTitle.Location = new System.Drawing.Point(126, 59);
             this.txtTitle.Name = "txtTitle";
             this.txtTitle.Size = new System.Drawing.Size(382, 20);
             this.txtTitle.TabIndex = 3;
@@ -337,18 +343,47 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(52, 33);
+            this.label1.Location = new System.Drawing.Point(55, 62);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Memo Title:";
+            // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(126, 33);
+            this.txtId.Name = "txtId";
+            this.txtId.ReadOnly = true;
+            this.txtId.Size = new System.Drawing.Size(79, 20);
+            this.txtId.TabIndex = 7;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(55, 36);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(51, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Memo Id:";
+            // 
+            // btn_Reset
+            // 
+            this.btn_Reset.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Reset.Location = new System.Drawing.Point(465, 12);
+            this.btn_Reset.Name = "btn_Reset";
+            this.btn_Reset.Size = new System.Drawing.Size(90, 33);
+            this.btn_Reset.TabIndex = 2;
+            this.btn_Reset.Text = "Reset";
+            this.btn_Reset.UseVisualStyleBackColor = true;
+            this.btn_Reset.Visible = false;
+            this.btn_Reset.Click += new System.EventHandler(this.btn_Reset_Click);
             // 
             // Memo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
-            this.ClientSize = new System.Drawing.Size(569, 466);
+            this.ClientSize = new System.Drawing.Size(569, 484);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
@@ -397,5 +432,8 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.FontDialog fontDialog1;
         private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btn_Reset;
     }
 }

@@ -106,5 +106,17 @@ namespace DiaryProject.Properties {
                 this["userPass"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int lastMemoId {
+            get {
+                return ((int)(this["lastMemoId"]));
+            }
+            set {
+                this["lastMemoId"] = value;
+            }
+        }
     }
 }
