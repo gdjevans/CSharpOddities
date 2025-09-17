@@ -236,7 +236,7 @@ namespace DiaryProject
             // ---------------- Load Login Form ---------------------
             DiaryProject.otherForms.Login loginForm = new otherForms.Login();
             loginForm.ShowDialog();
-            // -------------------------------------------------------------
+            // ------------------------------------------------------
         }
 
         private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
@@ -250,6 +250,15 @@ namespace DiaryProject
             mf = new otherForms.Memo();
             mf.MdiParent = this;
             mf.Show();
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            // ---------------- Load Login Form ---------------------
+            DiaryProject.otherForms.Search searchForm = new otherForms.Search();
+            searchForm.MdiParent = this;
+            searchForm.Show();
+            // -------------------------------------------------------------
         }
     }
 }

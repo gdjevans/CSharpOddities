@@ -34,24 +34,25 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
+            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.label3 = new System.Windows.Forms.Label();
             this.cboMusic = new System.Windows.Forms.ComboBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.lblDayName = new System.Windows.Forms.Label();
+            this.lblYear = new System.Windows.Forms.Label();
+            this.lblMonthName = new System.Windows.Forms.Label();
+            this.lblDayDate = new System.Windows.Forms.Label();
             this.lblTimer = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.lblVersion = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.conLock = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.lockApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripDropDownButton();
@@ -61,22 +62,21 @@
             this.toolStripButton5 = new System.Windows.Forms.ToolStripDropDownButton();
             this.aboutUsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.lblDayName = new System.Windows.Forms.Label();
-            this.lblYear = new System.Windows.Forms.Label();
-            this.lblMonthName = new System.Windows.Forms.Label();
-            this.lblDayDate = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.conLock = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.lockApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
+            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.conLock.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -120,6 +120,16 @@
             this.label4.TabIndex = 1;
             this.label4.Text = "User Name - ";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(41, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(73, 77);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.button4);
@@ -140,6 +150,15 @@
             this.button4.Text = "Load";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // axWindowsMediaPlayer1
+            // 
+            this.axWindowsMediaPlayer1.Enabled = true;
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(3, 3);
+            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
+            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(154, 98);
+            this.axWindowsMediaPlayer1.TabIndex = 6;
             // 
             // label3
             // 
@@ -162,6 +181,66 @@
             this.cboMusic.TabIndex = 7;
             this.cboMusic.SelectedIndexChanged += new System.EventHandler(this.cboMusic_SelectedIndexChanged);
             // 
+            // panel3
+            // 
+            this.panel3.BackgroundImage = global::DiaryProject.Properties.Resources.calendar;
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel3.Controls.Add(this.lblDayName);
+            this.panel3.Controls.Add(this.lblYear);
+            this.panel3.Controls.Add(this.lblMonthName);
+            this.panel3.Controls.Add(this.lblDayDate);
+            this.panel3.Location = new System.Drawing.Point(-1, 104);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(162, 153);
+            this.panel3.TabIndex = 5;
+            // 
+            // lblDayName
+            // 
+            this.lblDayName.BackColor = System.Drawing.Color.Transparent;
+            this.lblDayName.Font = new System.Drawing.Font("Microsoft Tai Le", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDayName.ForeColor = System.Drawing.Color.Black;
+            this.lblDayName.Location = new System.Drawing.Point(4, 114);
+            this.lblDayName.Name = "lblDayName";
+            this.lblDayName.Size = new System.Drawing.Size(144, 28);
+            this.lblDayName.TabIndex = 3;
+            this.lblDayName.Text = "Tuesday";
+            this.lblDayName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lblYear
+            // 
+            this.lblYear.BackColor = System.Drawing.Color.Transparent;
+            this.lblYear.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblYear.ForeColor = System.Drawing.Color.White;
+            this.lblYear.Location = new System.Drawing.Point(21, 35);
+            this.lblYear.Name = "lblYear";
+            this.lblYear.Size = new System.Drawing.Size(47, 28);
+            this.lblYear.TabIndex = 0;
+            this.lblYear.Text = "2019";
+            // 
+            // lblMonthName
+            // 
+            this.lblMonthName.BackColor = System.Drawing.Color.Transparent;
+            this.lblMonthName.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMonthName.ForeColor = System.Drawing.Color.White;
+            this.lblMonthName.Location = new System.Drawing.Point(58, 35);
+            this.lblMonthName.Name = "lblMonthName";
+            this.lblMonthName.Size = new System.Drawing.Size(90, 28);
+            this.lblMonthName.TabIndex = 1;
+            this.lblMonthName.Text = "December";
+            this.lblMonthName.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // lblDayDate
+            // 
+            this.lblDayDate.BackColor = System.Drawing.Color.Transparent;
+            this.lblDayDate.Font = new System.Drawing.Font("Microsoft Tai Le", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDayDate.ForeColor = System.Drawing.Color.Black;
+            this.lblDayDate.Location = new System.Drawing.Point(12, 48);
+            this.lblDayDate.Name = "lblDayDate";
+            this.lblDayDate.Size = new System.Drawing.Size(136, 76);
+            this.lblDayDate.TabIndex = 2;
+            this.lblDayDate.Text = "20";
+            this.lblDayDate.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // lblTimer
             // 
             this.lblTimer.BackColor = System.Drawing.Color.Black;
@@ -173,6 +252,20 @@
             this.lblTimer.TabIndex = 1;
             this.lblTimer.Text = "12:33:20";
             this.lblTimer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // button3
+            // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.Image = global::DiaryProject.Properties.Resources._216171_device_desktop_icon;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button3.Location = new System.Drawing.Point(-1, 553);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(162, 41);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "Show Desktop";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // panel2
             // 
@@ -244,67 +337,6 @@
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // conLock
-            // 
-            this.conLock.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lockApplicationToolStripMenuItem,
-            this.refreshToolStripMenuItem});
-            this.conLock.Name = "conLock";
-            this.conLock.Size = new System.Drawing.Size(164, 48);
-            // 
-            // lockApplicationToolStripMenuItem
-            // 
-            this.lockApplicationToolStripMenuItem.Name = "lockApplicationToolStripMenuItem";
-            this.lockApplicationToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
-            this.lockApplicationToolStripMenuItem.Text = "Lock Application";
-            this.lockApplicationToolStripMenuItem.Click += new System.EventHandler(this.lockApplicationToolStripMenuItem_Click);
-            // 
-            // refreshToolStripMenuItem
-            // 
-            this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
-            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
-            this.refreshToolStripMenuItem.Text = "Refresh";
-            this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
-            // 
-            // axWindowsMediaPlayer1
-            // 
-            this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(3, 3);
-            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
-            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(154, 98);
-            this.axWindowsMediaPlayer1.TabIndex = 6;
-            // 
-            // button2
-            // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Image = global::DiaryProject.Properties.Resources._61439_minus_icon;
-            this.button2.Location = new System.Drawing.Point(840, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(23, 23);
-            this.button2.TabIndex = 4;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Image = global::DiaryProject.Properties.Resources._34217_close_delete_remove_icon;
-            this.button1.Location = new System.Drawing.Point(869, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(23, 23);
-            this.button1.TabIndex = 3;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // toolStripButton1
             // 
             this.toolStripButton1.AutoSize = false;
@@ -327,6 +359,7 @@
             this.toolStripButton2.Size = new System.Drawing.Size(80, 73);
             this.toolStripButton2.Text = "Search Memo";
             this.toolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // toolStripButton3
             // 
@@ -394,89 +427,57 @@
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.helpToolStripMenuItem.Text = "Help";
             // 
-            // pictureBox1
+            // timer1
             // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(41, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(73, 77);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // panel3
+            // conLock
             // 
-            this.panel3.BackgroundImage = global::DiaryProject.Properties.Resources.calendar;
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel3.Controls.Add(this.lblDayName);
-            this.panel3.Controls.Add(this.lblYear);
-            this.panel3.Controls.Add(this.lblMonthName);
-            this.panel3.Controls.Add(this.lblDayDate);
-            this.panel3.Location = new System.Drawing.Point(-1, 104);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(162, 153);
-            this.panel3.TabIndex = 5;
+            this.conLock.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lockApplicationToolStripMenuItem,
+            this.refreshToolStripMenuItem});
+            this.conLock.Name = "conLock";
+            this.conLock.Size = new System.Drawing.Size(164, 48);
             // 
-            // lblDayName
+            // lockApplicationToolStripMenuItem
             // 
-            this.lblDayName.BackColor = System.Drawing.Color.Transparent;
-            this.lblDayName.Font = new System.Drawing.Font("Microsoft Tai Le", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDayName.ForeColor = System.Drawing.Color.Black;
-            this.lblDayName.Location = new System.Drawing.Point(4, 114);
-            this.lblDayName.Name = "lblDayName";
-            this.lblDayName.Size = new System.Drawing.Size(144, 28);
-            this.lblDayName.TabIndex = 3;
-            this.lblDayName.Text = "Tuesday";
-            this.lblDayName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lockApplicationToolStripMenuItem.Name = "lockApplicationToolStripMenuItem";
+            this.lockApplicationToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.lockApplicationToolStripMenuItem.Text = "Lock Application";
+            this.lockApplicationToolStripMenuItem.Click += new System.EventHandler(this.lockApplicationToolStripMenuItem_Click);
             // 
-            // lblYear
+            // refreshToolStripMenuItem
             // 
-            this.lblYear.BackColor = System.Drawing.Color.Transparent;
-            this.lblYear.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblYear.ForeColor = System.Drawing.Color.White;
-            this.lblYear.Location = new System.Drawing.Point(21, 35);
-            this.lblYear.Name = "lblYear";
-            this.lblYear.Size = new System.Drawing.Size(47, 28);
-            this.lblYear.TabIndex = 0;
-            this.lblYear.Text = "2019";
+            this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.refreshToolStripMenuItem.Text = "Refresh";
+            this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
             // 
-            // lblMonthName
+            // button2
             // 
-            this.lblMonthName.BackColor = System.Drawing.Color.Transparent;
-            this.lblMonthName.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMonthName.ForeColor = System.Drawing.Color.White;
-            this.lblMonthName.Location = new System.Drawing.Point(58, 35);
-            this.lblMonthName.Name = "lblMonthName";
-            this.lblMonthName.Size = new System.Drawing.Size(90, 28);
-            this.lblMonthName.TabIndex = 1;
-            this.lblMonthName.Text = "December";
-            this.lblMonthName.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.Image = global::DiaryProject.Properties.Resources._61439_minus_icon;
+            this.button2.Location = new System.Drawing.Point(840, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(23, 23);
+            this.button2.TabIndex = 4;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // lblDayDate
+            // button1
             // 
-            this.lblDayDate.BackColor = System.Drawing.Color.Transparent;
-            this.lblDayDate.Font = new System.Drawing.Font("Microsoft Tai Le", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDayDate.ForeColor = System.Drawing.Color.Black;
-            this.lblDayDate.Location = new System.Drawing.Point(12, 48);
-            this.lblDayDate.Name = "lblDayDate";
-            this.lblDayDate.Size = new System.Drawing.Size(136, 76);
-            this.lblDayDate.TabIndex = 2;
-            this.lblDayDate.Text = "20";
-            this.lblDayDate.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // button3
-            // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Image = global::DiaryProject.Properties.Resources._216171_device_desktop_icon;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.Location = new System.Drawing.Point(-1, 553);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(162, 41);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Show Desktop";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Image = global::DiaryProject.Properties.Resources._34217_close_delete_remove_icon;
+            this.button1.Location = new System.Drawing.Point(869, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(23, 23);
+            this.button1.TabIndex = 3;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
@@ -503,15 +504,15 @@
             this.panel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.conLock.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
