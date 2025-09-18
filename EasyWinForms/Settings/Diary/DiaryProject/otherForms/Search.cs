@@ -36,5 +36,25 @@ namespace DiaryProject.otherForms
             mf = new otherForms.Memo();
             mf.Show();
         }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // ---------------------------------------------
+            string fn;
+            string fn_title;
+            string fn_date;
+            Int32 lastId;
+            Int32.TryParse(this.listBox1.Text, out lastId);
+            // ---------------------------------------------
+            fn = Application.StartupPath + "\\data\\docs\\" + lastId.ToString() + ".rtf";
+            fn_title = Application.StartupPath + "\\data\\docs\\title_" + lastId.ToString() + ".txt";
+            fn_date = Application.StartupPath + "\\data\\docs\\date_" + lastId.ToString() + ".txt";
+            // ---------------------------------------------
+            this.richTextBox1.LoadFile(fn); 
+            this.txtTitle.Text = System.IO.File.ReadAllText(fn_title, Encoding.UTF8);
+            this.txtDate.Text = System.IO.File.ReadAllText(fn_date, Encoding.UTF8);
+            this.txtId.Text = lastId.ToString();
+            // ---------------------------------------------
+        }
     }
 }
