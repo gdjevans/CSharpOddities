@@ -56,5 +56,12 @@ namespace DiaryProject.otherForms
             this.txtId.Text = lastId.ToString();
             // ---------------------------------------------
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Int32 i;
+            i = this.listBox1.FindStringExact(this.txtSearch.Text);
+            this.listBox1.SelectedIndex = i;
+        }
     }
 }
