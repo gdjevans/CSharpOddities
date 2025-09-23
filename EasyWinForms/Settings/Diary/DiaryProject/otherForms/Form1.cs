@@ -260,5 +260,39 @@ namespace DiaryProject
             searchForm.Show();
             // -------------------------------------------------------------
         }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode==Keys.F2)
+            {
+                toolStripButton1_Click(sender, e);
+            }
+            // -------------------------
+            if (e.KeyCode == Keys.F3)
+            {
+                this.toolStripButton2_Click(sender, e);
+            }
+            // -------------------------
+            if (e.KeyCode == Keys.F4)
+            {
+                this.toolStripButton3.ShowDropDown();
+            }
+            // -------------------------
+            if (e.KeyCode == Keys.F5)
+            {
+                this.toolStripButton4.ShowDropDown();
+            }
+            // -------------------------
+            if (e.KeyCode == Keys.F6)
+            {
+                this.toolStripButton5.ShowDropDown();
+            }
+            // -------------------------
+            if (e.KeyCode == Keys.Escape)
+            {
+                button1_Click(sender, e);
+            }
+            // -------------------------
+        }
     }
 }
