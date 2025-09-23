@@ -140,5 +140,19 @@ namespace DiaryProject.otherForms
             DiaryProject.Properties.Settings.Default.Save();
             // ---------------------------------------------
         }
+
+        private void Memo_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F2)
+            {
+                this.btnNew_Click(sender, e);
+            }
+            // -------------------------
+            if (e.KeyCode == Keys.F5)
+            {
+                this.btnSave_Click(sender, e);
+            }
+            // -------------------------
+        }
     }
 }

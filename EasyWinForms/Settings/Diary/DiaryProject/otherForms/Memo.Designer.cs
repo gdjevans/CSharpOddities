@@ -48,18 +48,18 @@
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_Reset = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.txtDate = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtTitle = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btn_Reset = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -277,6 +277,18 @@
             this.panel1.Size = new System.Drawing.Size(569, 57);
             this.panel1.TabIndex = 2;
             // 
+            // btn_Reset
+            // 
+            this.btn_Reset.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Reset.Location = new System.Drawing.Point(465, 12);
+            this.btn_Reset.Name = "btn_Reset";
+            this.btn_Reset.Size = new System.Drawing.Size(90, 33);
+            this.btn_Reset.TabIndex = 2;
+            this.btn_Reset.Text = "Reset";
+            this.btn_Reset.UseVisualStyleBackColor = true;
+            this.btn_Reset.Visible = false;
+            this.btn_Reset.Click += new System.EventHandler(this.btn_Reset_Click);
+            // 
             // btnNew
             // 
             this.btnNew.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -317,6 +329,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Memo Details";
             // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(126, 33);
+            this.txtId.Name = "txtId";
+            this.txtId.ReadOnly = true;
+            this.txtId.Size = new System.Drawing.Size(79, 20);
+            this.txtId.TabIndex = 7;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(55, 36);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(51, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Memo Id:";
+            // 
             // txtDate
             // 
             this.txtDate.Location = new System.Drawing.Point(126, 85);
@@ -349,35 +378,6 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Memo Title:";
             // 
-            // txtId
-            // 
-            this.txtId.Location = new System.Drawing.Point(126, 33);
-            this.txtId.Name = "txtId";
-            this.txtId.ReadOnly = true;
-            this.txtId.Size = new System.Drawing.Size(79, 20);
-            this.txtId.TabIndex = 7;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(55, 36);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Memo Id:";
-            // 
-            // btn_Reset
-            // 
-            this.btn_Reset.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Reset.Location = new System.Drawing.Point(465, 12);
-            this.btn_Reset.Name = "btn_Reset";
-            this.btn_Reset.Size = new System.Drawing.Size(90, 33);
-            this.btn_Reset.TabIndex = 2;
-            this.btn_Reset.Text = "Reset";
-            this.btn_Reset.UseVisualStyleBackColor = true;
-            this.btn_Reset.Visible = false;
-            this.btn_Reset.Click += new System.EventHandler(this.btn_Reset_Click);
-            // 
             // Memo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -386,12 +386,14 @@
             this.ClientSize = new System.Drawing.Size(569, 484);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Memo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Memo Registration";
             this.Load += new System.EventHandler(this.Memo_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Memo_KeyDown);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
