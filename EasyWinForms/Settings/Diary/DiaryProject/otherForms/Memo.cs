@@ -88,44 +88,59 @@ namespace DiaryProject.otherForms
 
         private void btnNew_Click(object sender, EventArgs e)
         {
-            this.groupBox1.Enabled = true;
-            this.btnNew.Enabled = false;
-            this.btnSave.Enabled = true;
-            // ---------------------------------------------
-            Int32 i;
-            i = DiaryProject.Properties.Settings.Default.lastMemoId + 1;
-            this.txtId.Text = i.ToString();
-            // ---------------------------------------------
-            this.txtTitle.Text = "";
-            this.txtDate.Text = "";
-            this.richTextBox1.Text = "";
+            try
+            {
+                this.groupBox1.Enabled = true;
+                this.btnNew.Enabled = false;
+                this.btnSave.Enabled = true;
+                // ---------------------------------------------
+                Int32 i;
+                i = DiaryProject.Properties.Settings.Default.lastMemoId + 1;
+                this.txtId.Text = i.ToString();
+                // ---------------------------------------------
+                this.txtTitle.Text = "";
+                this.txtDate.Text = "";
+                this.richTextBox1.Text = "";
+            }
+            catch (Exception ex)
+            {
+                comm_class.my_error_msg(ex.ToString());
+            }
+            
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            this.groupBox1.Enabled = false;
-            this.btnSave.Enabled = false;
-            this.btnNew.Enabled = true;
-            // ---------------------------------------------
-            Int32 lastId;
-            lastId = DiaryProject.Properties.Settings.Default.lastMemoId;
-            lastId = lastId + 1;
-            // ---------------------------------------------
-            DiaryProject.Properties.Settings.Default.lastMemoId = lastId;
-            DiaryProject.Properties.Settings.Default.Save();
-            // ---------------------------------------------
-            string fn;
-            string fn_title;
-            string fn_date;
-            fn = Application.StartupPath + "\\data\\docs\\" + lastId.ToString() + ".rtf";
-            fn_title = Application.StartupPath + "\\data\\docs\\title_" + lastId.ToString() + ".txt";
-            fn_date = Application.StartupPath + "\\data\\docs\\date_" + lastId.ToString() + ".txt";
-            // ---------------------------------------------
-            System.IO.File.WriteAllText(fn_title, this.txtTitle.Text, Encoding.UTF8);
-            System.IO.File.WriteAllText(fn_date, this.txtDate.Text, Encoding.UTF8);
-            // ---------------------------------------------
-            this.richTextBox1.SaveFile(fn);
-            MessageBox.Show("Successful Save");
+            try
+            {
+                this.groupBox1.Enabled = false;
+                this.btnSave.Enabled = false;
+                this.btnNew.Enabled = true;
+                // ---------------------------------------------
+                Int32 lastId;
+                lastId = DiaryProject.Properties.Settings.Default.lastMemoId;
+                lastId = lastId + 1;
+                // ---------------------------------------------
+                DiaryProject.Properties.Settings.Default.lastMemoId = lastId;
+                DiaryProject.Properties.Settings.Default.Save();
+                // ---------------------------------------------
+                string fn;
+                string fn_title;
+                string fn_date;
+                fn = Application.StartupPath + "\\data\\docs\\" + lastId.ToString() + ".rtf";
+                fn_title = Application.StartupPath + "\\data\\docs\\title_" + lastId.ToString() + ".txt";
+                fn_date = Application.StartupPath + "\\data\\docs\\date_" + lastId.ToString() + ".txt";
+                // ---------------------------------------------
+                System.IO.File.WriteAllText(fn_title, this.txtTitle.Text, Encoding.UTF8);
+                System.IO.File.WriteAllText(fn_date, this.txtDate.Text, Encoding.UTF8);
+                // ---------------------------------------------
+                this.richTextBox1.SaveFile(fn);
+                MessageBox.Show("Successful Save");
+            }
+            catch (Exception ex)
+            {
+                comm_class.my_error_msg(ex.ToString());
+            }
         }
 
         private void Memo_Load(object sender, EventArgs e)

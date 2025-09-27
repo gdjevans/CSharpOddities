@@ -39,29 +39,44 @@ namespace DiaryProject.otherForms
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // ---------------------------------------------
-            string fn;
-            string fn_title;
-            string fn_date;
-            Int32 lastId;
-            Int32.TryParse(this.listBox1.Text, out lastId);
-            // ---------------------------------------------
-            fn = Application.StartupPath + "\\data\\docs\\" + lastId.ToString() + ".rtf";
-            fn_title = Application.StartupPath + "\\data\\docs\\title_" + lastId.ToString() + ".txt";
-            fn_date = Application.StartupPath + "\\data\\docs\\date_" + lastId.ToString() + ".txt";
-            // ---------------------------------------------
-            this.richTextBox1.LoadFile(fn); 
-            this.txtTitle.Text = System.IO.File.ReadAllText(fn_title, Encoding.UTF8);
-            this.txtDate.Text = System.IO.File.ReadAllText(fn_date, Encoding.UTF8);
-            this.txtId.Text = lastId.ToString();
-            // ---------------------------------------------
+            try
+            {
+                // ---------------------------------------------
+                string fn;
+                string fn_title;
+                string fn_date;
+                Int32 lastId;
+                Int32.TryParse(this.listBox1.Text, out lastId);
+                // ---------------------------------------------
+                fn = Application.StartupPath + "\\data\\docs\\" + lastId.ToString() + ".rtf";
+                fn_title = Application.StartupPath + "\\data\\docs\\title_" + lastId.ToString() + ".txt";
+                fn_date = Application.StartupPath + "\\data\\docs\\date_" + lastId.ToString() + ".txt";
+                // ---------------------------------------------
+                this.richTextBox1.LoadFile(fn);
+                this.txtTitle.Text = System.IO.File.ReadAllText(fn_title, Encoding.UTF8);
+                this.txtDate.Text = System.IO.File.ReadAllText(fn_date, Encoding.UTF8);
+                this.txtId.Text = lastId.ToString();
+                // ---------------------------------------------
+            }
+            catch (Exception ex)
+            {
+                comm_class.my_error_msg(ex.ToString());
+            }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Int32 i;
-            i = this.listBox1.FindStringExact(this.txtSearch.Text);
-            this.listBox1.SelectedIndex = i;
+            try
+            {
+                Int32 i;
+                i = this.listBox1.FindStringExact(this.txtSearch.Text);
+                this.listBox1.SelectedIndex = i;
+            }
+            catch (Exception ex)
+            {
+                comm_class.my_error_msg(ex.ToString());
+            }
         }
     }
 }
