@@ -42,35 +42,43 @@ namespace DiaryProject
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // ---------------- Load Login Form ---------------------
-            DiaryProject.otherForms.Login loginForm = new otherForms.Login();
-            loginForm.ShowDialog();
-            // -------------------------------------------------------------
+            try
+            {
+                // ---------------- Load Login Form ---------------------
+                DiaryProject.otherForms.Login loginForm = new otherForms.Login();
+                loginForm.ShowDialog();
+                // -------------------------------------------------------------
 
-            // ---------------- Populate Sidebar Clock ---------------------
-            getTime();
-            // -------------------------------------------------------------
-            // -------- Populate Sidebar Calendar with System Date ---------
-            getCalendar();
-            // -------------------------------------------------------------
-            this.lblVersion.Text = Application.ProductVersion;
-            // --------------- Populate Background Image -------------------
-            Int32 si;
-            si = DiaryProject.Properties.Settings.Default.selectedBakImg;
-            loadBak(si);
-            // -------------------------------------------------------------
-            backgroundComboLoader();
-            this.comboBox1.SelectedIndex = si;
-            // ---------------- Populate Music Combobox --------------------
-            musicComboLoader();
-            // -------------------------------------------------------------
-            // ---------------- Populate Music Combobox --------------------
-            //Int32 sm;
-            //sm = DiaryProject.Properties.Settings.Default.selectedMusIndex;
-            //this.cboMusic.SelectedIndex = sm;
-            //musicLoader(sm);
-            // -------------------------------------------------------------
-            userInfoLoader();
+                // ---------------- Populate Sidebar Clock ---------------------
+                getTime();
+                // -------------------------------------------------------------
+                // -------- Populate Sidebar Calendar with System Date ---------
+                getCalendar();
+                // -------------------------------------------------------------
+                this.lblVersion.Text = Application.ProductVersion;
+                // --------------- Populate Background Image -------------------
+                Int32 si;
+                si = DiaryProject.Properties.Settings.Default.selectedBakImg;
+                loadBak(si);
+                // -------------------------------------------------------------
+                backgroundComboLoader();
+                this.comboBox1.SelectedIndex = si;
+                // ---------------- Populate Music Combobox --------------------
+                musicComboLoader();
+                // -------------------------------------------------------------
+                // ---------------- Populate Music Combobox --------------------
+                //Int32 sm;
+                //sm = DiaryProject.Properties.Settings.Default.selectedMusIndex;
+                //this.cboMusic.SelectedIndex = sm;
+                //musicLoader(sm);
+                // -------------------------------------------------------------
+                userInfoLoader();
+            }
+            catch (Exception ex) 
+            {
+                comm_class.my_error_msg(ex.ToString());
+            }
+           
         }
 
         public void userInfoLoader()

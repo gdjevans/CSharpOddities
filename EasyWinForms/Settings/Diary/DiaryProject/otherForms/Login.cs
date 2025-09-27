@@ -18,7 +18,14 @@ namespace DiaryProject.otherForms
         }
         private void Login_Load(object sender, EventArgs e)
         {
-            userInfoLoader();
+            try
+            {
+                userInfoLoader();
+            }
+            catch (Exception ex)
+            {
+                comm_class.my_error_msg(ex.ToString());
+            }
         }
 
         public void userInfoLoader()
@@ -38,18 +45,25 @@ namespace DiaryProject.otherForms
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (this.txtPassword.Text == " " || this.txtPassword.TextLength == 0)
+            try
             {
-                MessageBox.Show("Password field is empty, you feeling okay?");
-                return;
-            } 
-            if (this.txtPassword.Text == DiaryProject.Properties.Settings.Default.userPass)
-            {
-                this.Close();
+                if (this.txtPassword.Text == " " || this.txtPassword.TextLength == 0)
+                {
+                    MessageBox.Show("Password field is empty, you feeling okay?");
+                    return;
+                }
+                if (this.txtPassword.Text == DiaryProject.Properties.Settings.Default.userPass)
+                {
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Password ain't good man, you sure you type good?");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Password ain't good man, you sure you type good?");
+                comm_class.my_error_msg(ex.ToString());
             }
         }
     }
