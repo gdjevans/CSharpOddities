@@ -22,8 +22,8 @@ namespace ConditionalLogic.Properties
                 Console.WriteLine("The number is even or divisable by 3");
             }
             
-            int num = 7;
-            if(!(num % 2 == 0))
+            int num7 = 7;
+            if(!(num7 % 2 == 0))
             {
                 Console.WriteLine("The number is odd");
             }
