@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EnhancedSwitchStatement.cs" />
     <Compile Include="LadderIfElseExercise.cs" />
     <Compile Include="LadderIfElseExercise2.cs" />
     <Compile Include="NestedIfElse.cs" />
