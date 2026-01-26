@@ -78,5 +78,132 @@ namespace Arrays
             string[] nameList = { "Alex", "Sara", "Tim", "Frannie", "Sophie" };
             this.Text = nameList.Length.ToString();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string[] nameList = { "Alex", "Sophie", "Abigail", "Frannie" };
+            string[] nameList2 = { "Alex", "Sophie", "Abigail", "Frannie", "Marika" };
+            //---------------------------------
+            int i;
+            string item;
+            this.listBox1.Items.Clear();
+            //---------------------------------
+            for (i = 0; i < nameList.Length; i++)
+            {
+                item = nameList[i];
+                this.listBox1.Items.Add(item);
+            }
+            //---------------------------------
+            for (i = 0; i < nameList2.Length; i++)
+            {
+                nameList2[i] = "";
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string[] nameList = { "Alex", "Sophie", "Abigail", "Frannie", "Beth" };
+            //---------------------------------------
+            foreach (string item in nameList)
+            {
+                this.listBox1.Items.Add(item);
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.listBox1.Items.Clear();
+            //---------------------------------------
+            string[] nameList = { "Alex", "Sophie", "Abigail", "Frannie", "Beth", "Cindy", "Heather", "Mitch" };
+            this.listBox1.Items.AddRange(nameList);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
+            //---------------------------------------
+            string[] nameList = { "Alex", "Sophie", "Abigail", "Frannie", "Beth", "Cindy", "Heather", "Bilbo" };
+            Int32[] nameList2 = { 1, 12, 32, 98, 56, 77, 803, 4 };
+            //------------ASC sort items-------------
+            Array.Sort(nameList);
+            this.listBox1.Items.AddRange(nameList);
+            //---------------------------------------
+            //------------ASC sort items-------------
+            Array.Sort(nameList2);
+            //---------------------------------------
+            foreach (Int32 item in nameList2)
+            {
+                this.listBox1.Items.Add(item.ToString());
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.listBox1.Items.Clear();
+            //---------------------------------------
+            string[] nameList = { "Alex", "Sophie", "Abigail", "Frannie", "Beth", "Cindy", "Heather", "Gretchen" };
+            Int32[] nameList2 = { 1, 12, 32, 98, 56, 77, 803, 4 };
+            //------------DESC sort items-------------
+            Array.Sort(nameList);
+            Array.Reverse(nameList);
+            this.listBox1.Items.AddRange(nameList);
+            //return;
+            //---------------------------------------
+            Array.Sort(nameList2);
+            Array.Reverse(nameList2);
+            foreach (Int32 item in nameList2)
+            {
+                this.listBox1.Items.Add(item.ToString());
+            }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            //-----------------------------------------------
+            Int32[] nameList2 = { 1, 12, 32, 98, 56, 77, 803, 4 };
+            MessageBox.Show("The minimum number is: " + nameList2.Min().ToString());
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            //-----------------------------------------------
+            Int32[] nameList2 = { 1, 12, 32, 98, 56, 77, 803, 4 };
+            MessageBox.Show("The maximum number is: " + nameList2.Max().ToString());
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            string[] nameList = { "Alex", "Sophie", "Abigail", "Frannie", "Beth"};
+            string[] target_array = new string[5];
+            nameList.CopyTo(target_array, 0);
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            string[] nameList = { "Alex", "Sophie", "Abigail", "Frannie", "Beth" };
+            Array.Resize(ref nameList, 10);
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            string[] nameList = { "Alex", "Sophie", "Abigail", "Frannie", "Beth" };
+            Array.Clear(nameList, 0, nameList.Length);
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            string[] nameList = { "Alex", "Sophie", "Abigail", "Frannie", "Beth" };
+            //this.Text = Array.IndexOf(nameList, this.search_txtbox.Text).ToString();
+            Int32 r;
+            r = Array.IndexOf(nameList, this.search_txtbox.Text);
+            if (r > -1)
+            {
+                System.Windows.Forms.MessageBox.Show("Found: Index is: " + r.ToString());
+            }
+            else
+            {
+                System.Windows.Forms.MessageBox.Show("Not Found: Index is: " + r.ToString());
+            }
+        }
     }
 }
