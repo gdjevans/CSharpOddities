@@ -16,7 +16,7 @@ namespace Arrays
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Hashtable());
+            Application.Run(new SortedList());
         }
     }
 }
