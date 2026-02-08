@@ -1,0 +1,20 @@
+using System
+using System.IO
+namespace CSharpFundamentals
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			var path = @"C:\Projects\CSharpFundamentals\HelloWorld\HelloWorld.sln";
+			
+			var dotIndex = path.IndexOf('.');
+			var extension = path.Substring(dotIndex);
+			
+			Console.WriteLine("Extension: " + Path.GetExtension(path));
+			Console.WriteLine("Filename: " + Path.GetFileName(path));
+			Console.WriteLine("Filenamewithoutextension: " + Path.GetFileNameWithoutExtension(path));
+			Console.WriteLine("Directory: " + Path.GetDirectoryName(path));
+		}
+	}
+}

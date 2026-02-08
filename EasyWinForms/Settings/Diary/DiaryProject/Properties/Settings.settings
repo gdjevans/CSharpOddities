@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="DiaryProject.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="selectedBakImg" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="selectedMusIndex" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="copyright" Type="System.String" Scope="User">
+      <Value Profile="(Default)">2025</Value>
+    </Setting>
+    <Setting Name="programmerName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Grey Liaisons</Value>
+    </Setting>
+    <Setting Name="designerName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Pillow Talk</Value>
+    </Setting>
+    <Setting Name="userName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Admin</Value>
+    </Setting>
+    <Setting Name="userPass" Type="System.String" Scope="User">
+      <Value Profile="(Default)">password02</Value>
+    </Setting>
+    <Setting Name="lastMemoId" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
