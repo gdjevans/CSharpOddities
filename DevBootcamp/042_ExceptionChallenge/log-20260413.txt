@@ -1,0 +1,4 @@
+2026-04-13 12:13:53.296 +01:00 [INF] Information message: Before Calculation
+2026-04-13 12:13:53.338 +01:00 [ERR] Error occurred: Divide by zero
+System.DivideByZeroException: Attempted to divide by zero.
+   at Program.Main() in F:\Projects\TutzProjectz2022\CSharpOddities\DevBootcamp\042_ExceptionChallenge\exceptionApp.cs:line 20
